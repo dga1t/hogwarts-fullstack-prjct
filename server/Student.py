@@ -3,8 +3,8 @@ import datetime
 
 
 class Student:
-    def __init__(self, ID, f_name, l_name, email, password):
-        self._ID = ID
+    def __init__(self, _id, f_name, l_name, email, password):
+        self._id = str(_id)
         self.f_name = f_name
         self.l_name = l_name
         self.email = email
@@ -25,7 +25,7 @@ class Student:
 
     @staticmethod
     def from_json(student_json):
-        return Student(student_json['_ID'], student_json['f_name'], student_json['l_name'], student_json['email'],
+        return Student(student_json['_id'], student_json['f_name'], student_json['l_name'], student_json['email'],
                        student_json['password'])
 
 
