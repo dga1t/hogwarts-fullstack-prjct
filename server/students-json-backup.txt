@@ -1,0 +1,8 @@
+{"go@sha.net": {"ID": 8, "f_name": "Gosha", "l_name": "Kopylov", "email": "go@sha.net", "password": "abc", "possessed_skills": {"levitation": 3}, "desired_skills": {"programming": 5}}, 
+  "sa@na.org": {"ID": 3, "f_name": "Sana", "l_name": "Korol", "email": "sa@na.org", "password": "def", "possessed_skills": {"invisibility": 2}, "desired_skills": {"rainofmoney": 5}}}
+
+
+{"go@sha.net": {"ID": 8, "f_name": "Gosha", "l_name": "Kopylov", "email": "go@sha.net", "password": "abc", 
+  "possessed_skills": {"levitation": 3}, "desired_skills": {"programming": 5}}, 
+  "di@man.net": {"ID": 1, "f_name": "Diman", "l_name": "Pman", "email": "di@man.net", "password": "fff", 
+    "possessed_skills": {"levitation": 4}, "desired_skills": {"programming": 5}}}
