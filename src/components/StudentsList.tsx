@@ -13,7 +13,7 @@ const StudentsList = ( {students}: StudentsListProps ) => {
   return(
     <Container className={styles.StudentsListLayout}>
       {students.map((student) => (
-        <StudentCard key={student.id} student={student} />
+        <StudentCard key={student._ID} student={student} />
       ))}
     </Container>
   )

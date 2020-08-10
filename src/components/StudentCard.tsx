@@ -15,7 +15,7 @@ const StudentCard = ( {student}: StudentCardProps) => {
 
   return(
     <Card className="mb-2 d-flex flex-row">
-     <Card.Body className={styles.StudentCard}>{student.name}</Card.Body>
+     <Card.Body className={styles.StudentCard}>{student.f_name} {student.l_name}</Card.Body>
      <Button variant="primary"><Pencil size={22} /></Button>
      <Button variant="primary"><Trash size={22} /></Button>
     </Card>

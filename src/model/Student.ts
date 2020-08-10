@@ -1,6 +1,7 @@
 export interface Student {
-  id: string;
+  _ID: string;
   date: Date;
-  name: string;
+  f_name: string;
+  l_name: string;
   skills: {};
 }
