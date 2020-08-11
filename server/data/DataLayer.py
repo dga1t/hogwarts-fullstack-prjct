@@ -10,15 +10,31 @@ class DataLayer:
     def to_json(self):
         return json.dumps(self, default=lambda o: o.__dict__)
 
+    def shutdown(self):
+        self.mongo_db.shutdown()
+
     def add_student(self, student_obj):
         self.mongo_db.add_student(student_obj)
 
-    # 3.2.2
-    def get_student_by_email(self, students_email):
-        pass
+    # def edit_student(self, edited_student):
+    #     self.mongo_db.edit_student(edited_student)
+
+    def delete_student(self, student):
+        self.mongo_db.delete_student(student)
+
+    def get_student_by_email(self, email):
+        student = self.mongo_db.get_student_by_email(email)
+        return student.__dict__
 
         # student = self.students_dict.get(students_email)
         # return student.__dict__
+
+    def get_students_by_date(self, date):
+        students_dict = {}
+        students = self.mongo_db.get_students_by_date(date)
+        for key, value in students.items():
+            students_dict[key] = value.__dict__
+        return students_dict
 
     def get_all_students(self):
         students_dict = {}
@@ -42,11 +58,6 @@ class DataLayer:
         #     students_json_list.append(str(instance))
         # return students_json_list
 
-    # 3.5 function for removing a student from the students dictionary
-    def remove_student(self, student):
-        self.mongo_db.delete_student(student)
-
-        # self.students_dict.pop(students_email['email'], None)
 
     # 3.6
     def persist_students(self):
